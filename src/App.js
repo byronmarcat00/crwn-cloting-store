@@ -2,14 +2,19 @@
 import Home from "./components/routes/home/home.component";
 import { Route,Routes} from "react-router-dom";
 import Navigation from "./components/routes/Navigation/navigation.component";
-import SignIn from "./components/routes/sing-in/sign-in.component";
+import Authentication from "./components/routes/authentication/authentication.component";
 
+
+const Shop =() => {
+  return <h1> I am the shop page</h1>
+}
 const App = () => {
   return(
   <Routes>
   <Route  path='/'  element={<Navigation/>}>
       <Route   index element={<Home/>}/> 
-      <Route path="Sign-In" element={<SignIn/>}/>
+      <Route  path='shop' element={<Shop/>}/>
+      <Route path="auth" element={<Authentication/>}/>
 
 
   </Route>
